@@ -6,7 +6,7 @@ set -o pipefail
 ./start-services.sh
 
 # install temporary nodejs
-mkdir -p /tmp/opt/nodejs && curl -sL https://nodejs.org/download/release/v14.18.3/node-v14.18.3-linux-x64.tar.gz | tar xzf - -C /tmp/opt/nodejs --strip-components=1
+mkdir -p /tmp/opt/nodejs && curl -sL https://nodejs.org/download/release/v14.18.3/node-v14.18.3-linux-ppc64le.tar.gz | tar xzf - -C /tmp/opt/nodejs --strip-components=1
 # add path
 export PATH=/tmp/opt/nodejs/bin:$PATH
 
