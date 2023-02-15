@@ -21,7 +21,7 @@ FROM ghcr.io/eclipse/openvsx-server:f061c72 AS openvsx-server
 FROM registry.access.redhat.com/ubi8/ubi:8.7-1054.1675788412 AS ubi-builder
 RUN mkdir -p /mnt/rootfs
 # Install httpd and postgresql
-RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+RUN yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-ppc64le/pgdg-redhat-repo-latest.noarch.rpm
 RUN yum install --installroot /mnt/rootfs postgresql14-libs postgresql14 postgresql14-server \
     java-11-openjdk coreutils-single glibc-minimal-langpack glibc-langpack-en langpacks-en glibc-locale-source httpd nc \
     net-tools procps vi curl wget tar gzip jq\
